@@ -84,7 +84,7 @@ body.dark {
   color: var(--icon-color);
 }
 
-/* ✅ Search Box */
+/* Search Box */
 .search-dropdown {
   position: fixed;
   top: -80px; /* hidden initially */
@@ -103,7 +103,7 @@ body.dark {
 }
 
 .search-dropdown.show {
-  top: 75px; /* visible below navbar */
+  top: 75px; 
 }
 
 .search-input {

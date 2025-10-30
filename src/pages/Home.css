@@ -1,21 +1,19 @@
-.home-container {
+/* 🔧 Reset */
+.home {
   margin: 0;
   padding: 0;
   color: var(--text-color);
-  background: var(--body-bg, var(--sidebar-bg));
-  min-height: 100vh;
-  overflow-x: hidden; /* to stay below navbar */
-  color: var(--text-color);
-  background: var(--body-bg, var(--sidebar-bg));
-  min-height: 100vh;
+  background: var(--body-bg);
+  overflow-x: hidden;
 }
 
-/* Hero Video Section */
+/* Video Section */
 .video-section {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .background-video {
@@ -28,43 +26,142 @@
   z-index: 1;
 }
 
+/* Overlay text */
 .video-overlay {
   position: relative;
   z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 move items to top */
   align-items: center;
-  color: #fff;
   text-align: center;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 0 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 300px; /* 👈 100px gap from top */
 }
 
 .video-overlay h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .video-overlay p {
   font-size: 1.2rem;
+  max-width: 600px;
 }
 
-/* Additional Content */
-.home-content {
-  padding: 60px 15%;
-  text-align: center;
-  background: var(--sidebar-bg);
-  transition: background 0.4s ease, color 0.4s ease;
+.learn-more-btn {
+  margin-top: 20px;
+  background: #ffcc00;
+  color: #111;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.home-content h2 {
-  font-size: 2rem;
+.learn-more-btn:hover {
+  background: #e6b800;
+}
+
+
+
+/* --- Our Story Section --- */
+.our-story {
+  width: 100%;
+  background: linear-gradient(to right, #f8f9fa, #e3e3e3);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.story-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%; /* reduced padding for full width */
+  gap: 40px;
+}
+
+.story-text {
+  flex: 1;
+  color: #222;
+  padding-right: 40px;
+}
+
+.story-text h5 {
+  color: #c0392b;
+  letter-spacing: 2px;
   margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.home-content p {
+.story-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.story-text p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.owner {
+  margin-top: 30px;
+}
+
+.owner h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.owner p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Image Section */
+.story-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Fade Animation --- */
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-left {
+  transform: translateX(-80px);
+}
+
+.fade-right {
+  transform: translateX(80px);
+}
+
+.fade-in .fade-left,
+.fade-in .fade-right {
+  opacity: 1;
+  transform: translateX(0);
 }

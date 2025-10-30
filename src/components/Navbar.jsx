@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
-  FaHome,
   FaPhoneAlt,
   FaSearch,
   FaBars,
@@ -36,14 +35,12 @@ function Navbar() {
         <div className="nav-container">
           {/* Left side - Logo */}
           <div className="nav-left">
-            <h2 className="nav-title">Indian Steel</h2>
+            <h2 className="nav-title">Indian Steel Industries</h2>
           </div>
 
           {/* Right side - Icons */}
           <div className="nav-icons">
-            <Link to="/" className="nav-icon" title="Home">
-              <FaHome />
-            </Link>
+            
 
             <Link to="/contact" className="nav-icon" title="Contact Us">
               <FaPhoneAlt />
@@ -65,7 +62,7 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* ✅ Search Box - Drops Below Navbar */}
+      {/* Search Box - Drops Below Navbar */}
       <div className={`search-dropdown ${searchOpen ? "show" : ""}`}>
         <input
           type="text"
