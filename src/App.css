@@ -1,29 +1,21 @@
-:root {
-  --navbar-bg: rgba(0, 0, 0, 0.7);
-  --text-color: #fff;
-  --sidebar-bg: #111;
-  --body-bg: #f4f4f4;
-}
-
-[data-theme="light"] {
-  --navbar-bg: rgba(255, 255, 255, 0.9);
+/* === Light Mode === */
+body.light {
+  --body-bg: #ffffff;
   --text-color: #111;
-  --sidebar-bg: #fff;
-  --body-bg: #f4f4f4;
+  --overlay-bg: rgba(0, 0, 0, 0.3);
+  --section-bg: linear-gradient(to right, #f8f9fa, #e3e3e3);
+  --btn-bg: #ffcc00;
+  --btn-hover-bg: #e6b800;
+  --btn-text: #111;
 }
 
-[data-theme="dark"] {
-  --navbar-bg: rgba(0, 0, 0, 0.85);
-  --text-color: #fff;
-  --sidebar-bg: #111;
-  --body-bg: #000;
-}
-
-body, html, .app {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background: var(--body-bg);
-  color: var(--text-color);
-  transition: background 0.4s ease, color 0.4s ease;
+/* === Dark Mode === */
+body.dark {
+  --body-bg: #0d1117;
+  --text-color: #e6e6e6;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --section-bg: linear-gradient(to right, #1b1f23, #0d1117);
+  --btn-bg: #facc15;
+  --btn-hover-bg: #d4af37;
+  --btn-text: #111;
 }

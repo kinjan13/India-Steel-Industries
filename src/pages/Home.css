@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 
-/* Video Section */
+/* 🎥 Video Section */
 .video-section {
   position: relative;
   width: 100%;
@@ -33,12 +33,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 👈 move items to top */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
-  padding-top: 300px; /* 👈 100px gap from top */
+  color: var(--text-color);
+  background: var(--overlay-bg);
+  padding-top: 300px;
 }
 
 .video-overlay h1 {
@@ -54,8 +54,8 @@
 
 .learn-more-btn {
   margin-top: 20px;
-  background: #ffcc00;
-  color: #111;
+  background: var(--btn-bg);
+  color: var(--btn-text);
   padding: 10px 25px;
   font-size: 1rem;
   border: none;
@@ -65,17 +65,16 @@
 }
 
 .learn-more-btn:hover {
-  background: #e6b800;
+  background: var(--btn-hover-bg);
 }
-
-
 
 /* --- Our Story Section --- */
 .our-story {
   width: 100%;
-  background: linear-gradient(to right, #f8f9fa, #e3e3e3);
+  background: var(--section-bg);
   padding: 100px 0;
   overflow: hidden;
+  transition: background 0.4s ease;
 }
 
 .story-container {
@@ -83,13 +82,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%; /* reduced padding for full width */
+  padding: 0 5%;
   gap: 40px;
 }
 
 .story-text {
   flex: 1;
-  color: #222;
+  color: var(--text-color);
   padding-right: 40px;
 }
 
@@ -110,7 +109,7 @@
 .story-text p {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .owner {
@@ -141,6 +140,11 @@
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s ease;
+}
+
+body.dark .story-image img {
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
 }
 
 /* --- Fade Animation --- */
