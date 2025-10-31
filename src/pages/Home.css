@@ -1,4 +1,4 @@
-/* 🔧 Reset */
+/* --- Home Page Styles --- */
 .home {
   margin: 0;
   padding: 0;
@@ -36,7 +36,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  color: var(--text-color);
+  color: white;
   background: var(--overlay-bg);
   padding-top: 300px;
 }
@@ -72,7 +72,7 @@
 .our-story {
   width: 100%;
   background: var(--section-bg);
-  padding: 100px 0;
+  padding: 100px 0 40px; 
   overflow: hidden;
   transition: background 0.4s ease;
 }
@@ -147,6 +147,72 @@ body.dark .story-image img {
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
 }
 
+/* --- Responsive Design for  Story Section --- */
+
+/* Tablet View (max-width: 992px) */
+@media (max-width: 992px) {
+  .story-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    padding: 0 8%;
+  }
+
+  .story-text {
+    padding-right: 0;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+  }
+
+  .story-image {
+    justify-content: center;
+  }
+
+  .story-image img {
+    max-width: 500px;
+  }
+}
+
+/* Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  .our-story {
+    padding: 70px 0 30px;
+  }
+
+  .story-container {
+    gap: 35px;
+  }
+
+  .story-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+  }
+
+  .owner h4 {
+    font-size: 1rem;
+  }
+
+  .owner p {
+    font-size: 0.85rem;
+  }
+
+  .story-image img {
+    width: 90%;
+    max-width: 380px;
+    border-radius: 10px;
+  }
+}
+
+
 /* --- Fade Animation --- */
 .fade-left,
 .fade-right {
@@ -169,3 +235,302 @@ body.dark .story-image img {
   opacity: 1;
   transform: translateX(0);
 }
+
+
+/* --- Features Section -1-- 
+.features-section {
+  width: 100%;
+  background: var(--section-bg);
+  padding: 40px 5% 80px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1300px;
+}*/
+
+/* Each Feature Card 1 
+.feature-card {
+  flex: 1 1 calc(25% - 30px);
+  background: #fff;
+  border-left: 4px solid #ff7a00;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  border-left-color: #ffb300;
+}
+*/
+/* Icon Styling 
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(70%) hue-rotate(10deg);
+}*/
+/* Text Styling 
+.feature-text h3 {
+  color: #ff7a00;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.feature-text p {
+  color:var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+*/
+/* Dark Mode Adjustments
+body.dark .feature-card {
+  background: #515050;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .feature-card:hover {
+  box-shadow: 0 6px 18px rgba(182, 176, 176, 0.959);
+}
+
+body.dark .feature-text p {
+  color:var(--text-color);
+}
+
+
+@media (max-width: 900px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+ */
+
+/* 🔹 FEATURED SECTION 2 */
+.featured-section {
+  padding: 80px 5%;
+  background: var(--section-bg);
+}
+
+.featured-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Left Image */
+.featured-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.featured-image img {
+  width: 100%;
+  max-width: 500px;
+  height: 480px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.featured-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Right Content */
+.featured-content {
+  flex: 1.2;
+  min-width: 320px;
+  color: var(--section-bg);
+}
+
+.featured-content h5 {
+  color: #ff7b00;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.featured-content h2 {
+  font-size: 2.5rem;
+  color: var(--section-bg);
+  margin-bottom: 15px;
+}
+
+.featured-content p {
+  color:var(--section-bg);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.featured-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featured-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Counter Section */
+.counter-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.counter-box {
+  flex: 1;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 10s ease, box-shadow 0.3s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.counter-box h3 {
+  color: #002244;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.counter-box p {
+  font-size: 2rem;
+  color: #ff7b00;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+/* Fade Animations */
+.fade-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.fade-right {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.fade-in .fade-left,
+.fade-in .fade-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* --- Dark Mode Adjustments for Animation Counters --- */
+body.dark .counter-box {
+  background: #2a2a2a; 
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+body.dark .counter-box:hover {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+  transform: translateY(-6px);
+}
+
+body.dark .counter-box h3 {
+  color: var(--text-color);
+}
+
+body.dark .counter-box p {
+  color: var(--btn-bg); 
+}
+
+
+.features-section {
+  padding-bottom: 40px; 
+}
+
+
+.featured-section {
+  padding-top: 80px; 
+}
+
+
+.features-section + .featured-section {
+  margin-top: -30px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+  .featured-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Center the text block properly */
+  .featured-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  /* Keep bullet list  */
+  .featured-content ul {
+    display: inline-block;
+    text-align: left; 
+    margin: 0 auto;
+  }
+
+  .featured-content h2,
+  .featured-content p {
+    text-align: center;
+  }
+
+  /* center the image on mobile */
+  .featured-image {
+    text-align: center;
+  }
+
+  .featured-image img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
